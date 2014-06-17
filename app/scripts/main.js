@@ -1,5 +1,28 @@
-
+//initialize parse location
 Parse.initialize("dt8DfJoVpPqTM004VdtOUEeXXqRdxBfc88fksbNN", "gsPQIKflI4ErhhNa4Ad6HNzcyhEjoYjumZLJRKcE");
+
+//instance of Post Collection
+var posts = new PostCollection();
+
+posts.fetch({
+  success: function(collection) {
+    collection.each(function(object) {
+    	console.warn(object);
+      // object.attributes.imageFile.url();
+    	new PostView({
+    		model: object
+    	});
+    });
+  },
+  error: function(collection, error) {
+    console.log('could not retrieve object');
+  }
+});
+
+
+
+
+
 
 // var TestObject = Parse.Object.extend("TestObject");
 // var testObject = new TestObject();
@@ -12,7 +35,7 @@ Parse.initialize("dt8DfJoVpPqTM004VdtOUEeXXqRdxBfc88fksbNN", "gsPQIKflI4ErhhNa4A
 // var query = new Parse.Query(Post)
 
 
-// $('.save-file').click(function(){
+// $('.upload-file').click(function(){
 // 	var fileUploadControl = $('.input-file')[0];
 // 	if (fileUploadControl.files.length > 0) {
 // 	  var file = fileUploadControl.files[0];

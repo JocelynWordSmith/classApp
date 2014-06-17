@@ -22,41 +22,24 @@
         <![endif]-->
 
 
-<div class="wrapper">
-     <div class="container">
+
+<div class="upload-container">
 
         <div class="upload">
-            <div class="upload-background">
                 <h2>Upload A New Image Here</h2>
-                <p>Click on the button below and choose an image from your computer to upload.  Please keep the file size below 10mb.</p>
             <input type="file" class="input-file"></input>
-            <button class="save-file">Save</button>
-            </div>
-        </div>
-        <div class="post">
-            <div class="post-data">
-                <h1>H1 TEXT</h1>
-                <!-- <h2>H2 TEXT</h2> -->
-                <p>Lorum Ipsum Loqui something, don't come to me for latin translations.</p>
-            </div>
-            <div class="post-image">
-                <img class="image-display" src="http://placekitten.com/900/900">
-            </div>
+            <button class="upload-file">Upload</button>
         </div>
 
-        <div class="post">
-            <div class="post-data">
-                <h1>H1 TEXT</h1>
-                <!-- <h2>H2 TEXT</h2> -->
-                <p>Lorum Ipsum Loqui something, don't come to me for latin translations.</p>
-            </div>
-            <div class="post-image">
-                <img class="image-display" src="http://placekitten.com/300/200">
-            </div>
-        </div>
-
-    </div>
 </div>
+
+<div class="post-container">
+    
+</div>
+
+<script type="text/template" class="post-view">
+    <img src="<%= imageFile.url() %>">
+</script>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
