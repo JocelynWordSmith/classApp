@@ -1,10 +1,13 @@
+'use strict';
+
 //parse model for image posts
 var Post = Parse.Object.extend({
-	className: 'Post'
+
+	className: 'Post',
+
 });
 
 //parse collection containing all posts (images)
 var PostCollection = Parse.Collection.extend({
-  model: Post
+	model: Post
 });
-

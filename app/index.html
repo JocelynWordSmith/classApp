@@ -21,30 +21,45 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+<div class="input-container"></div>
+<div class="active-container"></div>
 
 
-<div class="upload-container">
 
-        <div class="upload">
-                <h2>Upload A New Image Here</h2>
-            <input type="file" class="input-file"></input>
-            <button class="upload-file">Upload</button>
-        </div>
+<script type="text/template" class="login-view">
+    <input class="user-signup signup" placeholder="username"></input>
+    <input class="password-signup signup" placeholder="password"></input>
+    <input class="email-signup signup" placeholder="email"></input>
+    <button class="submit-signup signup">Sign Up</button>
 
-</div>
 
-<div class="post-container">
-    
-</div>
-
-<script type="text/template" class="post-view">
-    <img src="<%= imageFile.url() %>">
+    <button class="submit-login login">Log In</button>
+    <input class="password-login login" placeholder="password"></input>
+    <input class="user-login login" placeholder="username"></input>
 </script>
+
+<script type="text/template" class="upload-view">
+    <input type="file" class="input-file"></input>
+    <button class="upload-file">Upload</button>
+</script>
+
+
+
+<!-- template for the post view images -->
+<script type="text/template" class="post-view">
+    <img src="<%= imageFile.url() %>" class="post-bound">
+</script>
+
+
+
+
+
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/underscore/underscore.js"></script>
+        <script src="../bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -63,6 +78,7 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/model.js"></script>
         <script src="scripts/view.js"></script>
+        <script src="scripts/router.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
