@@ -11,13 +11,15 @@
 		/*line-height: 25px;*/
 	}
 
-	.signup {
+	.signup, .input-file, .upload-file {
 		float: left;
 	}
 
-	.login{
+	.login, .logout{
 		float: right;
 	}
+
+
 }
 
 
@@ -25,7 +27,9 @@
     width: 80em;
     margin: auto auto;
     margin-bottom: 80px;
+
 }
+
 
 .active-container {
 	height: 1000px;

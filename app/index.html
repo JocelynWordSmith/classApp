@@ -40,14 +40,25 @@
 
 <script type="text/template" class="upload-view">
     <input type="file" class="input-file"></input>
+    <input class="caption" placeholder="add a caption"></input>
     <button class="upload-file">Upload</button>
-</script>
 
+    <button class="logout">Log Out</button>
+</script>
 
 
 <!-- template for the post view images -->
 <script type="text/template" class="post-view">
-    <img src="<%= imageFile.url() %>" class="post-bound">
+    <h1><%= caption %></h1>
+    <h2> uploaded by: <%= user %></h2>
+
+    <a href="<%= imageFile.url() %>">
+        <img src="<%= imageFile.url() %>" class="post-bound">
+    </a>
+
+    <button class="delete user-options">Delete</button>
+    <button class="set-private user-options">Set to Private</button>
+
 </script>
 
 
