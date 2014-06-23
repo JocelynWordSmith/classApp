@@ -100,6 +100,7 @@ var UploadView = Parse.View.extend({
 
 			var postACL = new Parse.ACL(Parse.User.current());
 			postACL.setPublicReadAccess(true);
+			postACL.setPublicWriteAccess(false	);
 			image.setACL(postACL);
 
 			image.save().done(function() {
