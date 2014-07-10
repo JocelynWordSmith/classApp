@@ -31,7 +31,7 @@ var LoginView = Parse.View.extend({
 
 		user.signUp(null, {
 			success: function(user) {
-				window.location = '/#app';
+				window.location = '/classApp/app';
 			},
 			error: function(user, error) {
 				// Show the error message somewhere and let the user try again.
@@ -47,7 +47,7 @@ var LoginView = Parse.View.extend({
 		Parse.User.logIn(userName, password, {
 			success: function(user) {
 				// Do stuff after successful login.
-				window.location = '/#app';
+				window.location = '/classApp/app';
 				console.log(user + 'logged in');
 			},
 			error: function(user, error) {
@@ -113,7 +113,7 @@ var UploadView = Parse.View.extend({
 
 	logout: function() {
 		Parse.User.logOut();
-		window.location = '/';
+		window.location = '/classApp';
 
 	},
 
