@@ -4,7 +4,7 @@ var loginView;
 var uploadView;
 var postView;
 
-var AppRouter = Backbone.Router.extend({
+var AppRouter = Parse.Router.extend({
 
 	routes: {
 		'': 'home',

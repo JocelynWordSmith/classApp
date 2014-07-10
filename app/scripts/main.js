@@ -4,7 +4,7 @@
 Parse.initialize('dt8DfJoVpPqTM004VdtOUEeXXqRdxBfc88fksbNN', 'gsPQIKflI4ErhhNa4Ad6HNzcyhEjoYjumZLJRKcE');
 
 var router = new AppRouter();
-Backbone.history.start();
+Parse.history.start();
 
 
 
